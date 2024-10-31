@@ -29,7 +29,7 @@ export const addFavoriteItemToLS = (
   )
 
   if (existingItem) {
-    toast.success('Добавлено в избранное!')
+    toast.success('Додано до обраного!')
     return existingItem.clientId
   }
 
@@ -50,7 +50,7 @@ export const addFavoriteItemToLS = (
 
   localStorage.setItem('favorites', JSON.stringify(favorites))
   setFavoritesFromLS(favorites as IFavoriteItem[])
-  withToast && toast.success('Добавлено в избранное')
+  withToast && toast.success('Додано до обраного')
 
   return clientId
 }

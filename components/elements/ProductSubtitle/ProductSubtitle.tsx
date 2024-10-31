@@ -6,7 +6,7 @@ const ProductSubtitle = ({
   subtitleRectClassName,
 }: IProductSubtitleProps) => {
   const { lang, translations } = useLang()
-  const descriptionSlicePosition = lang === 'ru' ? 5 : 2
+const descriptionSlicePosition = lang === 'uk' ? 5 : 2;
 
   return (
     <div className={subtitleClassName}>

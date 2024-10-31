@@ -73,7 +73,7 @@ export const addCartItemToLS = (
 
     localStorage.setItem('cart', JSON.stringify(updatedCart))
     setCartFromLS(updatedCart)
-    toast.success('Добавлено в корзину')
+    toast.success('Додано до кошика')
     return existingItem.clientId
   }
 
@@ -94,7 +94,7 @@ export const addCartItemToLS = (
   ]
   localStorage.setItem('cart', JSON.stringify(cart))
   setCartFromLS(cart as ICartItem[])
-  withToast && toast.success('Добавлено в корзину')
+  withToast && toast.success('Додано до кошика')
 
   return clientId
 }

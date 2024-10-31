@@ -21,7 +21,7 @@ export const useComparisonAction = (product: IProduct) => {
     }
 
     if (isProductInComparison) {
-      toast.success('Добавлено в сравнение!')
+      toast.success('Додано для порівняння!')
       return
     }
 

@@ -20,7 +20,7 @@ import { useTTMap } from '@/hooks/useTTMap'
 import {
   setChosenCourierAddressData,
   setCourierAddressData,
-  setShouldLoadRostelecomData,
+  setShouldLoadTrendZoneData,
   setShouldShowCourierAddressData,
 } from '@/context/order'
 import { useUnit } from 'effector-react'
@@ -32,7 +32,7 @@ import {
   $shouldShowCourierAddressData,
 } from '@/context/order/state'
 import { $userGeolocation } from '@/context/user/state'
-import { IRostelecomAddressData } from '@/types/order'
+import { ITrendZoneAddressData } from '@/types/order'
 import CourierAddressesItem from './CourierAddressesItem'
 import { getGeolocationFx } from '@/context/user'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
@@ -177,7 +177,7 @@ const MapModal = () => {
       'bottom-left'
     )
 
-    const setMarkersByLocationsData = (data: IRostelecomAddressData[]) => {
+    const setMarkersByLocationsData = (data: ITrendZoneAddressData[]) => {
       data.forEach((item) => {
         const sw = new ttMaps.LngLat(item.bbox.lon1, item.bbox.lat1)
         const ne = new ttMaps.LngLat(item.bbox.lon2, item.bbox.lat2)
@@ -217,7 +217,7 @@ const MapModal = () => {
         (item) => item.address_line2 === chosenPickupAddressData.address_line2
       )[0]
 
-      setShouldLoadRostelecomData(false)
+      setShouldLoadTrendZoneData(false)
       setMarkersByLocationsData([chosenItem])
 
       map.setCenter([chosenItem.lon, chosenItem.lat]).zoomTo(12)

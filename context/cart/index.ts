@@ -91,7 +91,7 @@ export const addProductToCartFx = createEffect(
         return newData
       }
 
-      toast.success('Добавлено в корзину!')
+      toast.success('Додано до кошика!')
       return data
     } catch (error) {
       toast.error((error as Error).message)
@@ -149,7 +149,7 @@ export const deleteCartItemFx = createEffect(
         return newData
       }
 
-      toast.success('Удалено из корзины!')
+      toast.success('Вилучено із кошика!')
       return data
     } catch (error) {
       toast.error((error as Error).message)

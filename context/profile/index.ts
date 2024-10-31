@@ -70,7 +70,7 @@ export const editUsernameFx = profile.createEffect(
         return result
       }
 
-      toast.success('Имя сохранено!')
+      toast.success('Збережено!')
       setEdit(false)
       localStorage.setItem('auth', JSON.stringify(data.tokens))
       updateUsername(name)
@@ -94,7 +94,7 @@ export const verifyEmailFx = profile.createEffect(
 
       if (data?.error) {
         if (
-          data.error?.message === 'Пользователь с таким email уже существует'
+          data.error?.message === 'Користувач із таким email вже існує'
         ) {
           toast.error(data.error.message)
           return
@@ -178,7 +178,7 @@ export const editUserEmailFx = profile.createEffect(
         return newData
       }
 
-      toast.success('Email сохранен!')
+      toast.success('Email збережено!')
       setEdit(false)
       localStorage.setItem('auth', JSON.stringify(result.data.tokens))
       updateUserEmail(email)
@@ -204,7 +204,7 @@ export const deleteUserFx = profile.createEffect(
         return
       }
 
-      toast.success('Аккаунт удален!')
+      toast.success('Обліковий запис видалено!')
       handleLogout()
     } catch (error) {
       toast.error((error as Error).message)

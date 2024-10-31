@@ -77,7 +77,7 @@ const Hero = () => {
         <h2 className={styles.hero__title}>
           <span
             className={`${styles.hero__title__subtitle} ${
-              lang === 'ru' ? '' : styles.hero__title__subtitle_lang
+              lang === 'uk' ? '' : styles.hero__title__subtitle_lang
             }`}
           >
             [ {translations[lang].main_page.hero_subtitle} ]

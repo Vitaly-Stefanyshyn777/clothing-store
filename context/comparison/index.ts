@@ -40,7 +40,7 @@ export const addProductToComparisonFx = createEffect(
       }
       console.log(data)
 
-      toast.success('Добавлено в сравнение!')
+      toast.success('Додано для порівняння!')
       return data
     } catch (error) {
       toast.error((error as Error).message)
@@ -118,7 +118,7 @@ export const deleteComparisonItemFx = createEffect(
         return newData
       }
 
-      toast.success('Удалено из сравнения!')
+      toast.success('Вилучено із порівняння!')
       return data
     } catch (error) {
       toast.error((error as Error).message)

@@ -173,18 +173,18 @@ export const deleteProductFromLS = <T>(
 
 export const showCountMessage = (count: string, lang: string) => {
   if (count == '11' || count == '12' || count == '13' || count == '14') {
-    return lang === 'ru' ? 'товаров' : 'items'
+    return lang === 'uk' ? 'товарів' : 'items'
   }
 
   if (count.endsWith('1')) {
-    return lang === 'ru' ? 'товар' : 'item'
+    return lang === 'uk' ? 'товарів' : 'item'
   }
 
   if (count.endsWith('2') || count.endsWith('3') || count.endsWith('4')) {
-    return lang === 'ru' ? 'товара' : 'items'
+    return lang === 'ruk' ? 'товарів' : 'items'
   }
 
-  return lang === 'ru' ? 'товаров' : 'items'
+  return lang === 'uk' ? 'товарів' : 'items'
 }
 
 export const checkOffsetParam = (offset: string | string[] | undefined) =>
@@ -261,15 +261,15 @@ export const isValidAvatarImage = (image: File) => {
 
   if (!allowedExtension.test(imageType)) {
     toast.error(
-      `Недопустимый формат ${
+      `Неприпустимий формат ${
         imageType.split('/')[1]
-      }! Допускается только jpeg, jpg, png, gif, bmp и webp`
+      }! Допускається тільки jpeg, jpg, png, gif, bmp и webp`
     )
     return false
   }
 
   if (Math.round(image.size / 1024) > 2000) {
-    toast.error('Вес картинки не должен превышать 2 МБ!')
+    toast.error('Вага картинки не повинна перевищувати 2 МБ!')
     return false
   }
 

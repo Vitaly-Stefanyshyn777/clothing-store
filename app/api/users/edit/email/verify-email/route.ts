@@ -25,7 +25,7 @@ export async function POST(req: Request) {
 
     if (user) {
       return NextResponse.json({
-        error: { message: 'Пользователь с таким email уже существует' },
+        error: { message: 'Користувач із таким email вже існує' },
         status: 400,
       })
     }
@@ -33,9 +33,9 @@ export async function POST(req: Request) {
     const code = Math.floor(100000 + Math.random() * 900000)
 
     await sendMail(
-      'Rostelecom',
+      'TrendZone',
       reqBody.email,
-      `Ваш код подтверждения для изменения почты: ${code}`
+      `Ваш код підтвердження для зміни пошти: ${code}`
     )
 
     const { insertedId } = await db.collection('codes').insertOne({

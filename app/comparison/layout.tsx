@@ -1,7 +1,7 @@
 import ComparisonLayout from '@/components/layouts/ComparisonLayout'
 
 export const metadata = {
-  title: 'Ростелеком | Сравнение товаров',
+  title: 'TrendZone | Порівняння товарів',
 }
 
 export default function ComparisonRootLayout({

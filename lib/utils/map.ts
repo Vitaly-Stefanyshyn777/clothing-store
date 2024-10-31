@@ -2,26 +2,26 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import {
-  getRostelecomOfficesByCityFx,
+  getTrendZoneOfficesByCityFx,
   setChosenPickupAddressData,
-  setShouldLoadRostelecomData,
+  setShouldLoadTrendZoneData,
 } from '@/context/order'
 
 export const handleSelectPickupAddress = async (text: string) => {
   let langFromLS = JSON.parse(localStorage.getItem('lang') as string)
 
   if (!langFromLS) {
-    langFromLS = 'ru'
+    langFromLS = 'uk'
   }
 
-  setShouldLoadRostelecomData(true)
+  setShouldLoadTrendZoneData(true)
 
-  const rostelecomData = await getRostelecomOfficesByCityFx({
+  const trendZoneData = await getTrendZoneOfficesByCityFx({
     city: text.split(' ')[0].replace(',', ''),
     lang: langFromLS,
   })
 
-  return rostelecomData
+  return trendZoneData
 }
 
 //@ts-ignore

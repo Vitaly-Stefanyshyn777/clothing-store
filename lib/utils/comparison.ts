@@ -25,7 +25,7 @@ export const addComparisonItemToLS = (product: IProduct, withToast = true) => {
   )
 
   if (existingItem) {
-    toast.success('Добавлено в сравнение!')
+    toast.success('Додано для порівняння!')
     return existingItem.clientId
   }
 
@@ -46,7 +46,7 @@ export const addComparisonItemToLS = (product: IProduct, withToast = true) => {
 
   localStorage.setItem('comparison', JSON.stringify(comparison))
   setComparisonFromLS(comparison as IComparisonItem[])
-  withToast && toast.success('Добавлено в сравнение!')
+  withToast && toast.success('Додано для порівняння!')
 
   return clientId
 }

@@ -13,13 +13,13 @@ export async function POST(req: Request) {
 
   if (!user) {
     return NextResponse.json({
-      warningMessage: 'Пользователя не существует',
+      warningMessage: 'Користувача не існує',
     })
   }
 
   if (!bcrypt.compareSync(reqBody.password, user.password)) {
     return NextResponse.json({
-      warningMessage: 'Неправильный логин или пароль!',
+      warningMessage: 'Неправильний логін чи пароль!',
     })
   }
 

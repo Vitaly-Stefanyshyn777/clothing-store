@@ -18,8 +18,8 @@ import './globalStyles/breadcrumbs.css'
 import './globalStyles/map.css'
 
 export const metadata: Metadata = {
-  title: 'Rostelecom',
-  description: 'Rostelecom магазин одежды, аксесуаров, концелярии и сувениров',
+  title: 'TrendZone',
+  description: 'TrendZone магазин одягу, аксесуарів, канцелярії та сувенірів',
 }
 
 export const viewport: Viewport = {

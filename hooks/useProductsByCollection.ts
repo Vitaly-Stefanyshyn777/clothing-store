@@ -12,7 +12,7 @@ export const useProductsByCollection = (collection: string) => {
   const langText = translations[lang].product.collection_goods
   const capitalizedCollection = capitalizeFirstLetter(collection)
   const title =
-    lang === 'ru'
+    lang === 'uk'
       ? `${langText} «${capitalizedCollection}»`
       : [
         langText.slice(0, 17),

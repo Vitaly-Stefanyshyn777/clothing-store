@@ -27,7 +27,7 @@ const PasswordRestoreForm = ({ userEmail }: { userEmail: string }) => {
 
   const handleCompletePasswordRestore = (data: IPasswordRestoreInputs) => {
     if (data.password !== data.passwordRepeat) {
-      toast.error('Пароли не совпадают!')
+      toast.error('Паролі не збігаються!')
       return
     }
 

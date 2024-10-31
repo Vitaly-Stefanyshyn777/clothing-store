@@ -34,7 +34,7 @@ const ProfileName = () => {
   } = useForm<IInputs & { [index: string]: string }>()
   const nameRegister = register(
     'name',
-    nameValidationRules('Недопустимое значение!', 'Введите имя')
+    nameValidationRules(`Недопустимое значение!`, `Введіть ім'я`)
   )
 
   const handleNameInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

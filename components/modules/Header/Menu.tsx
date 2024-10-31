@@ -29,7 +29,7 @@ const Menu = () => {
     localStorage.setItem('lang', JSON.stringify(lang))
   }
 
-  const handleSwitchLangToRu = () => handleSwitchLang('ru')
+  const handleSwitchLangToUK = () => handleSwitchLang('uk')
   const handleSwitchLangToEn = () => handleSwitchLang('en')
 
   const handleShowCatalogList = () => setActiveListId(1)
@@ -139,11 +139,11 @@ const Menu = () => {
         <div className={`nav-menu__lang ${menuIsOpen ? 'open' : ''}`}>
           <button
             className={`btn-reset nav-menu__lang__btn ${
-              lang === 'ru' ? 'lang-active' : ''
+              lang === 'uk' ? 'lang-active' : ''
             }`}
-            onClick={handleSwitchLangToRu}
+            onClick={handleSwitchLangToUK}
           >
-            RU
+            UK
           </button>
           <button
             className={`btn-reset nav-menu__lang__btn ${

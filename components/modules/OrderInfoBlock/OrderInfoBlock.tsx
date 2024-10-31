@@ -68,7 +68,7 @@ const OrderInfoBlock = ({
     ) {
       const orderBlock = document.querySelector('.order-block') as HTMLLIElement
       scrollToBlock(orderBlock)
-      toast.error('Нужно выбрать адрес!')
+      toast.error('Потрібно обрати адресу!')
       return
     }
 
@@ -90,12 +90,12 @@ const OrderInfoBlock = ({
 
     if (chosenCourierAddressData.address_line1) {
       // eslint-disable-next-line max-len
-      description = `Адрес достаки товара курьером: ${chosenCourierAddressData.address_line1}, ${chosenCourierAddressData.address_line2}`
+      description = `Адреса доставки товару кур'єром: ${chosenCourierAddressData.address_line1}, ${chosenCourierAddressData.address_line2}`
     }
 
     if (chosenPickupAddressData.address_line1) {
       // eslint-disable-next-line max-len
-      description = `Адрес получения товара: ${chosenPickupAddressData.address_line1}, ${chosenPickupAddressData.address_line2}`
+      description = `Адреса отримання товару ${chosenPickupAddressData.address_line1}, ${chosenPickupAddressData.address_line2}`
     }
 
     console.log(orderDetailsValues)

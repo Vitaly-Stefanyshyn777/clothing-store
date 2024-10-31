@@ -18,7 +18,7 @@ export const useFavoritesAction = (product: IProduct) => {
   const handleAddProductToFavorites = () => {
     if (productsWithoutSizes.includes(product.type)) {
       if (existingItem) {
-        toast.success('Добавлено в избранное!')
+        toast.success('Додано до обраного!')
         return
       }
 

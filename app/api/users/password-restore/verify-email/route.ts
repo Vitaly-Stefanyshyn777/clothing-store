@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     if (!user) {
       return NextResponse.json({
-        error: { message: 'Пользователь с таким email не найден' },
+        error: { message: 'Користувача з таким email не знайдено' },
         status: 400,
       })
     }
@@ -18,9 +18,9 @@ export async function POST(req: Request) {
     const code = Math.floor(100000 + Math.random() * 900000)
 
     await sendMail(
-      'Rostelecom',
+      'TrendZone',
       reqBody.email,
-      `Ваш код подтверждения для восстановления пароля: ${code}`
+      `Ваш код підтвердження для відновлення пароля: ${code}`
     )
 
     const { insertedId } = await db.collection('codes').insertOne({

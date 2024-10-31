@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     if (!codeData) {
       return NextResponse.json({
         status: 400,
-        error: { message: 'Неправильный айди кода!' },
+        error: { message: 'Неправильний айді коду!' },
       })
     }
 
@@ -33,7 +33,7 @@ export async function POST(req: Request) {
     return NextResponse.json({
       status: 400,
       result: false,
-      error: { message: 'Неправильный код!' },
+      error: { message: 'Неправильний код!' },
     })
   } catch (error) {
     throw new Error((error as Error).message)

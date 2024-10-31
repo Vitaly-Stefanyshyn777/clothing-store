@@ -211,7 +211,7 @@ const SizeTable = () => {
     }
 
     if (favoriteItemBySize) {
-      toast.success('Добавлено в избранное!')
+      toast.success('Додано до обраного!')
       return
     }
 
